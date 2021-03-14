@@ -14,7 +14,7 @@
     align-items: center;
 
     justify-content: center;
-
+    box-shadow: 0 0 20px rgba($Desaturated_Dark_Blue,0.5);
     @media (min-width: 900px) {
         width: 800px;
         flex-direction: row;
