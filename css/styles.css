@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+:root {
+  font-size: 13px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+}
+
+body {
+  width: 100%;
+  background-color: #ecf2f8;
+  position: relative;
+}
+
+.content {
+  max-width: 375px;
+  width: 90%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+@media (min-width: 900px) {
+  .content {
+    max-width: 1440px;
+  }
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding: 1em 0;
+  text-align: center;
+  color: #6d7f97;
+}
+.attribution a {
+  color: #48556a;
+  font-weight: 700;
+}
+
+.card {
+  position: relative;
+  background-color: #fff;
+  width: 375px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 900px) {
+  .card {
+    width: 800px;
+    flex-direction: row;
+  }
+}
+.card__arow {
+  position: absolute;
+  z-index: 9;
+  right: 6em;
+  bottom: calc((65px / 2) - 2.5em);
+  width: 2.5em;
+  height: 2.5em;
+  line-height: 3em;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #ecf2f8;
+  padding: 1.5em;
+  font-size: 0.5em;
+  color: #6d7f97;
+  cursor: pointer;
+}
+.card__arow:hover {
+  background-color: #6d7f97;
+  color: #fff;
+}
+.card__image {
+  border-radius: 10px 10px 0 0;
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+}
+@media (min-width: 900px) {
+  .card__image {
+    height: 270px;
+    border-radius: 10px 0 0 10px;
+  }
+}
+.card__bottom {
+  width: 100%;
+  min-height: 317.7px;
+}
+@media (min-width: 900px) {
+  .card__bottom {
+    height: 270px;
+    min-height: 270px;
+  }
+}
+.card__bottom__description {
+  width: 100%;
+  padding: 2em 3em;
+}
+.card__bottom__description__title {
+  margin-bottom: 1em;
+  font-size: 1.4em;
+  font-weight: 700;
+  color: #48556a;
+}
+@media (min-width: 900px) {
+  .card__bottom__description__title {
+    margin-bottom: 0.5em;
+  }
+}
+.card__bottom__description__parraf {
+  letter-spacing: 0.05em;
+  line-height: 1.7em;
+  color: #6d7f97;
+}
+@media (min-width: 900px) {
+  .card__bottom__description__parraf {
+    line-height: 1.3em;
+  }
+}
+.card__bottom__social {
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  padding: 1em 3em;
+  transition: 0.5s ease;
+}
+.card__bottom__social.desactive {
+  height: 0;
+  padding: 0;
+}
+@media (min-width: 900px) {
+  .card__bottom__social.desactive {
+    height: 65px;
+    padding: 1em 3em;
+  }
+}
+.card__bottom__social__image {
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  margin-right: 1em;
+}
+.card__bottom__social__texts {
+  width: 1fr;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 3em;
+}
+.card__bottom__social__texts__title {
+  font-size: 1em;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #48556a;
+}
+.card__bottom__social__texts__date {
+  font-size: 1em;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: #9eafc2;
+}
+.card__bottom__popup {
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  transition: 0.5s ease;
+}
+.card__bottom__popup.active {
+  border-radius: 0 0 10px 10px;
+  height: 65px;
+  padding: 1em 3em;
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  background-color: #48556a;
+}
+@media (min-width: 900px) {
+  .card__bottom__popup {
+    position: relative;
+    overflow: initial;
+    width: 250px;
+    height: 50px;
+    bottom: 120px;
+    right: -217px;
+    opacity: 0;
+  }
+  .card__bottom__popup.active {
+    opacity: 1;
+    z-index: 5;
+    height: 50px;
+    border-radius: 10px;
+    padding: 1em 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #48556a;
+  }
+  .card__bottom__popup.active::before {
+    content: "";
+    position: absolute;
+    bottom: -12px;
+    z-index: -4;
+    left: calc((250px / 2) - 12px);
+    width: 24px;
+    height: 24px;
+    background-color: #48556a;
+    transform: rotate(45deg);
+  }
+}
+.card__bottom__popup__text {
+  color: #9eafc2;
+  font-weight: 500;
+  font-size: 1em;
+  letter-spacing: 0.4em;
+  margin-right: 1em;
+}
+.card__bottom__popup__icon {
+  font-size: 2em;
+  color: #fff;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+.card__bottom__popup__icon:hover {
+  transform: translateY(-2px);
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./images/favicon-32x32.png"
+        />
+        <link rel="stylesheet" href="./css/styles.css" />
+        <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+        <title>Frontend Mentor | Article preview component</title>
+        
+    </head>
+    <body>
+        <div class="content">
+            <div class="card">
+                <img
+                    src="./images/drawers.jpg"
+                    alt="drawers"
+                    class="card__image"
+                />
+                <div class="card__bottom">
+                    <div class="card__bottom__description">
+                        <h1 class="card__bottom__description__title">
+                            Shift the overall look and feel by adding these
+                            wonderful touches to furniture in your home
+                        </h1>
+                        <p class="card__bottom__description__parraf">
+                            Ever been in a room and felt like something was
+                            missing? Perhaps it felt slightly bare and
+                            uninviting. I’ve got some simple tips to help you
+                            make any room feel complete. Share
+                        </p>
+                    </div>
+
+                    <div id="card_social" class="card__bottom__social">
+                        <img
+                            src="./images/avatar-michelle.jpg"
+                            alt="avatar-michelle"
+                            class="card__bottom__social__image"
+                        />
+                        <div class="card__bottom__social__texts">
+                            <h2 class="card__bottom__social__texts__title">
+                                Michelle Appleton
+                            </h2>
+                            <p class="card__bottom__social__texts__date">
+                                28 Jun 2020
+                            </p>
+                        </div>
+                    </div>
+                    <div id="card_popup" class="card__bottom__popup">
+                        <span class="card__bottom__popup__text">SHARE</span>
+                        <ion-icon
+                            class="card__bottom__popup__icon"
+                            name="logo-facebook"
+                        ></ion-icon>
+                        <ion-icon
+                            class="card__bottom__popup__icon"
+                            name="logo-twitter"
+                        ></ion-icon>
+                        <ion-icon
+                            class="card__bottom__popup__icon"
+                            name="logo-pinterest"
+                        ></ion-icon>
+                    </div>
+                </div>
+
+                <ion-icon
+                    id="arrow_share"
+                    class="card__arow"
+                    name="arrow-redo-sharp"
+                ></ion-icon>
+            </div>
+
+        </div>
+        
+        <div class="attribution">
+            Challenge by
+            <a
+                href="https://www.frontendmentor.io?ref=challenge"
+                target="_blank"
+                >Frontend Mentor</a
+            >. Coded by <a href="https://github.com/kefer16" target="_blank">Kefer</a>.
+        </div>
+        <script src="./scripts.js"></script>
+    </body>
+</html>

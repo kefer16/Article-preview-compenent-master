@@ -1,0 +1,15 @@
+
+.attribution {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 1em 0;
+    text-align: center;
+    color: $Desaturated_Dark_Blue;
+    & a{
+        color: $Very_Dark_Grayish_Blue;
+        font-weight: 700;
+    }
+}
